@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ title }} weather</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}"
+    />
+  </head>
+  <body>
+    <div class="container">
+
+      <p>The weather for {{ title }}</p>
+      <p>is {{ status }} and the temperature is {{ temp }} &deg;</p>
+
+      <form action="/weather">
+        <input type="text" id="city" name="city" placeholder="Enter city name" />
+        <input type="submit" value="Check Weather" />
+      </form>
+
+    </div>
+  </body>
+</html>
